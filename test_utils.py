@@ -13,19 +13,27 @@ def test_dot_product():
     assert result == 32, f"Expected 32, but got {result}"
     
 def test_cosine_similarity():
-    ### YOUR CODE HERE
+    v1 = np.array([1, 2, 3])
+    v2 = np.array([5, 6, 7])
     
-    result = ### YOUR CODE HERE
+    result = cosine_similarity(v1, v2); 
     
-    expected_result = ### YOUR CODE HERE
+    #from solving with math
+    expected_result = 38 / np.sqrt(1540)
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
 def test_nearest_neighbor():
-    ### YOUR CODE HERE
     
-    result = ### YOUR CODE HERE
+    target_vector = np.array([1, 2])
+    vectors = np.array([
+    [2, 3],
+    [1, 1],
+    [4, 5]
+    ])
+
+    result = nearest_neighbor(target_vector, vectors)
     
-    expected_index = ### YOUR CODE HERE
+    expected_index = 0 
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
